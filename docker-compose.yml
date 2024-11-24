@@ -1,0 +1,27 @@
+services:
+  minio:
+    image: minio/minio
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: "admin"
+      MINIO_ROOT_PASSWORD: "admin123"
+    command: server /minio_data --console-address ":9001"
+    volumes:
+      - ./minio_data:/minio_data
+  app:
+    build: .
+    environment:
+        MINIO_ENDPOINT: "minio:9000"
+        MINIO_ROOT_USER: "admin"
+        MINIO_ROOT_PASSWORD: "admin123"
+    container_name: app
+    command: sh -c "python main.py && bash"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - minio
+    volumes:
+      - ./main:/app

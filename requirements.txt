@@ -1,2 +1,4 @@
 roboflow
 ultralytics
+minio
+mlflow

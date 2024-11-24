@@ -1,8 +1,9 @@
 FROM python:3.11
 LABEL authors="OldestSalt"
 
-RUN pip3 install -r requirements.txt
+WORKDIR /app
+COPY requirements.txt .
+RUN apt-get update && pip3 install -r requirements.txt
+RUN apt-get install -y python3-opencv
 
-COPY . .
-
-ENTRYPOINT ["python3", "train.py"]
+COPY main/ .
