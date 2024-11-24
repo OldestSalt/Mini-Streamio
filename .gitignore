@@ -1,5 +1,5 @@
 YOLO experiment/
 runs/
-mle-tech-cv.md
-download_dataset.py
-main.py
+/mle-tech-cv.md
+/main/download_dataset.py
+/main/main.py
