@@ -1,5 +1,4 @@
-YOLO experiment/
-runs/
 /mle-tech-cv.md
 /main/download_dataset.py
 /main/main.py
+/main/mlruns/

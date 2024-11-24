@@ -4,6 +4,7 @@ from minio import S3Error
 from ultralytics import YOLO, settings
 from minio_utils import get_client, download_file, upload_file
 import shutil
+import mlflow
 
 def train():
     parser = argparse.ArgumentParser()
@@ -23,15 +24,12 @@ def train():
         client.make_bucket(bucket)
 
     model_path = f'/models/{args.model}.pt'
-    if not os.path.exists(model_path):
+    if not os.path.exists(f'.{model_path}'):
         try:
             print('Model not found locally, downloading')
             download_file(bucket, model_path, f'.{model_path}', client)
         except S3Error:
             raise ValueError(f'Model {args.model} not found')
-            # print(f'Model {args.model} not found, downloading weights')
-            # YOLO(f'/app/{model_path}')
-            # upload_file(bucket, model_path, f'.{model_path}', client)
 
     dataset_zip = f'/datasets/{args.dataset}.zip'
     if not os.path.exists(f'.{dataset_zip}'):
@@ -45,7 +43,9 @@ def train():
     settings.update({'mlflow': True})
 
     model = YOLO(f'/app/{model_path}')
-    model.train(data=f'/app/datasets/{args.dataset}/data.yaml', epochs=5, batch=16, imgsz=416, device='cpu', pretrained=True, project='YOLO experiment', name='training_l')
+    model.train(data=f'/app/datasets/{args.dataset}/data.yaml', epochs=1, batch=16, imgsz=416, device='cpu', pretrained=True, project='YOLO experiment', name=f'training_{args.model}')
+    model.save(f'/app/models/trained_{args.model}.pt')
+    upload_file(bucket, f'/models/trained_{args.model}.pt', f'./models/trained_{args.model}.pt', client)
 
 if __name__ == '__main__':
     train()
