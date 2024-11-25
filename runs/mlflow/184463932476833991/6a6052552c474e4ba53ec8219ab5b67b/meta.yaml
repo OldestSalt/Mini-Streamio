@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/YandexDisk/Notebooks/test_task/runs/mlflow/184463932476833991/6a6052552c474e4ba53ec8219ab5b67b/artifacts
+end_time: 1732166934070
+entry_point_name: ''
+experiment_id: '184463932476833991'
+lifecycle_stage: active
+run_id: 6a6052552c474e4ba53ec8219ab5b67b
+run_name: training_n3
+run_uuid: 6a6052552c474e4ba53ec8219ab5b67b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732163321026
+status: 3
+tags: []
+user_id: pluxa

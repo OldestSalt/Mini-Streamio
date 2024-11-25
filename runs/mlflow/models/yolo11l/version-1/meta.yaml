@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1732193661875
+current_stage: None
+description: null
+last_updated_timestamp: 1732193661875
+name: yolo11l
+run_id: fa057e449fcf4fc78ac220a92e6f4f48
+run_link: null
+source: file:///E:/YandexDisk/Notebooks/test_task/runs/mlflow/184463932476833991/fa057e449fcf4fc78ac220a92e6f4f48/artifacts
+status: READY
+status_message: null
+storage_location: file:///E:/YandexDisk/Notebooks/test_task/runs/mlflow/184463932476833991/fa057e449fcf4fc78ac220a92e6f4f48/artifacts
+user_id: null
+version: 1

@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1732426045938
+current_stage: None
+description: null
+last_updated_timestamp: 1732426045938
+name: yolo11n.pt
+run_id: 34eb9544e1ba4cedaf10e8ebed8faa25
+run_link: null
+source: /app/runs/mlflow/806586161845598032/34eb9544e1ba4cedaf10e8ebed8faa25/artifacts/artifacts/weights/best.pt
+status: READY
+status_message: null
+storage_location: /app/runs/mlflow/806586161845598032/34eb9544e1ba4cedaf10e8ebed8faa25/artifacts/artifacts/weights/best.pt
+user_id: null
+version: 1

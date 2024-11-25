@@ -1,0 +1,15 @@
+artifact_uri: /app/runs/mlflow/806586161845598032/34eb9544e1ba4cedaf10e8ebed8faa25/artifacts
+end_time: 1732426044905
+entry_point_name: ''
+experiment_id: '806586161845598032'
+lifecycle_stage: active
+run_id: 34eb9544e1ba4cedaf10e8ebed8faa25
+run_name: training_yolo11n
+run_uuid: 34eb9544e1ba4cedaf10e8ebed8faa25
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732425475848
+status: 3
+tags: []
+user_id: root

@@ -1,0 +1,15 @@
+artifact_uri: /app/runs/mlflow/806586161845598032/1b948d6aa57a437fad92048e83b56a1e/artifacts
+end_time: 1732381165534
+entry_point_name: ''
+experiment_id: '806586161845598032'
+lifecycle_stage: active
+run_id: 1b948d6aa57a437fad92048e83b56a1e
+run_name: training_l3
+run_uuid: 1b948d6aa57a437fad92048e83b56a1e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732378694072
+status: 3
+tags: []
+user_id: root
